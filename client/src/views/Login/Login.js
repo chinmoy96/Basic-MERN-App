@@ -25,8 +25,14 @@ class Login extends Component {
             name: signUpName,
             password: signUpPassword
           })
-          .then(function (response) {
-            alert(response.data.message);
+          .then( (response)=> {
+            if(response.data.success)
+            {
+                this.props.history.push('/Home');
+            }
+            else{
+                alert(response.data.message);
+            }
           })
           .catch(function (error) {
             console.log(error);

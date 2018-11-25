@@ -8,7 +8,7 @@ export default ()=>{
         
             paths.map((path)=>{
                 return(
-                    <Route exart path={path.path} component={path.component}/>
+                    <Route exact path={path.path} component={path.component}/>
                 )
         })
         
