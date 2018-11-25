@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
 import SignUp from './views/SignUp/SignUp';
 import Login from './views/Login/Login';
+import {BrowserRouter,Switch, Route, Link} from 'react-router-dom';
+import Routes from './components/route';
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Login/>
-      </div>
+      <BrowserRouter>
+        <Switch>
+          <Routes/>
+        </Switch>
+      </BrowserRouter> 
     );
   }
 }
