@@ -50,10 +50,13 @@ route.post('/api/signin',(req,res)=>{
                     message:"password does not match"
                 });
             }
-            res.send({
-                success:true,
-                message:"log in successful"
-            });
+            else{
+                res.send({
+                    success:true,
+                    message:"log in successful"
+                });
+            }
+            
         }
     })
 })
